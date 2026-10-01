@@ -27,7 +27,7 @@ class Master:
 
   def can_take_task(self) -> bool:
     """Перевірка завантаженості майстра."""
-    return self.active_tasks < self.max_load
+    return self.active_tasks <= self.max_load
 
   def assign_task(self):
     self.active_tasks += 1
